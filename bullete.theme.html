@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{Title}</title>
+<link rel="icon" href="{Favicon}"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+<meta name="color:Background" content="#ffffff" />
+<meta name="color:BodyText" content="#666666" />
+<meta name="color:BodyLinks" content="#000000" />
+<meta name="color:LinksHover" content="#000000" />
+<meta name="color:PageLinks" content="#cccccc" />
+<meta name="color:Blockquote" content="#888888" />
+<meta name="color:Title" content="#d42f21" />
+<meta name="color:Date" content="#333333" />
+<meta name="color:Text" content="#ac1847" />
+<meta name="color:Photo" content="#5A750E" />
+<meta name="color:Quote" content="#39a3e2" />
+<meta name="color:Link" content="#4F4085" />
+<meta name="color:Chat" content="#DE741D" />
+<meta name="color:Audio" content="#1DA179" />
+<meta name="color:Video" content="#173880" />
+<style type="text/css">
+a {
+	color: {color:BodyLinks};
+	text-decoration: underline;
+}
+	a:hover {
+	color: {color:LinksHover} !important;
+}
+
+body {
+	background: {color:Background};
+	color: {color:BodyText};
+	font: 16px 'georgia';
+	margin: 3em 8em;
+}
+
+blockquote {
+	color: {color:Blockquote};
+	font-style: italic;
+}
+
+img {
+	/*border: 3px solid {color:BodyLinks};*/
+}
+
+.t_bullet {
+	float: left;
+	width: 100px;
+	font-size: 250px;
+	position: relative;
+	top: -140px;
+	margin-left: -100px;
+	margin-bottom: -500px;
+	z-index: 0;
+}
+
+.title, h1, h1 a {
+	color: {color:Title};
+	text-decoration: none;
+}
+
+.description {
+	margin-top: -1.5em;
+	margin-bottom: 2em;
+}
+
+h2 {
+	font-weight: normal;
+	margin-left: -55px;
+	margin-bottom: 2em;
+	color: {color:Date};
+}
+
+.post {
+	margin-bottom: 5em;
+	}
+
+.bullet {
+	font-size: 150px;
+	width: 50px;
+	margin-left: -55px;
+	margin-top: -85px;
+	float: left;
+	position: relative;
+	z-index: 2;
+}
+
+.page {
+	width: 90px;
+	margin-left: -90px;
+	color: {color:Background};
+	float: left;
+	position: relative;
+	z-index: 3;
+	margin-top: -5px;
+	text-align: center;
+}
+
+.bullet a {
+	text-decoration: none;
+}
+
+.text a, h3.text {
+	color: {color:Text};
+}
+
+.photo a {
+	color: {color:Photo};
+}
+
+.quote a {
+	color: {color:Quote};
+}
+
+.link a {
+	color: {color:Link};
+}
+
+.chat a, h3.chat {
+	color: {color:Chat};
+}
+	ul.chat, ul.chat li {
+	list-style: none;
+	padding: 0;
+}
+
+.audio a {
+	color: {color:Audio};
+}
+
+.video a {
+	color: {color:Video};
+}
+
+.pagination {
+	width: 300px;
+	font-size: 300px;
+	margin-bottom: -300px;
+	margin-top: -200px;
+	position: fixed;
+	right: 100px;
+}
+.pagination a {
+	text-decoration: none;
+	color: {color:PageLinks};
+}
+.pagination .previous {
+	float: left;
+	width: 150px;
+}
+.pagination .next {
+	float: right;
+	width: 150px;
+}
+
+#wrap {
+	width: 700px;
+}
+
+#sidebar {
+	width: 120px;
+	position: fixed;
+	right: 50px;
+	top: 50px;
+}
+#sidebar img {
+	border: 0;
+}
+.navigation {
+	position: fixed;
+	top: 140px;
+	right: 50px;
+	width: 320px;
+	font-size: 115%;
+	font-weight: bold;
+	font-family: Helvetica, sans-selif;
+}
+.navigation ul {
+	float: right;
+	margin: auto;
+	padding: auto;
+}
+.navigation ul li {
+	float: left;
+	list-style-type: none;
+	padding: 0 0.5em 0 0;
+}
+.navigation a:link,
+.navigation a:visited {
+	color: #8c0000;
+}
+.navigation a:hover {
+	color: #ffffff !important;
+}
+#following {
+	position: fixed;
+	bottom: 10px;
+}
+#following ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+#following li {
+	float: left;
+	margin: 2px 2px 0;
+}
+.post {
+  margin-bottom: 2400px;
+}
+</style>
+</head>
+<body>
+
+<!-- Begin .pagination -->
+{block:pagination}<div class="pagination">
+{block:previouspage}
+<div class="previous"><a href="{previouspage}" rel="prev">&laquo;</a></div>
+{/block:previouspage}
+{block:nextpage}
+<div class="next"><a href="{nextpage}" rel="next">&raquo;</a></div>
+{/block:nextpage}
+</div>{/block:pagination}<!-- End .pagination -->
+
+<!-- Begin .navigation -->
+<div class="navigation">
+<ul>
+<li><a href="http://twitter.com/morygonzalez">Twitter</a></li>
+<li><a href="http://www.flickr.com/photos/morygonzalez/">Flickr</a></li>
+<li><a href="http://www.portalshit.net/">portal shit!</a></li>
+</ul>
+</div><!-- End .navigation -->
+
+<!-- Begin #following -->
+<div id="following">
+{block:Following}
+<ul>
+{block:Followed}
+<li>
+<a href="{FollowedURL}" title="{FollowedName}"><img src="{FollowedPortraitURL-24}"/></a>
+</li>
+{/block:Followed}
+</ul>
+{/block:Following}
+</div><!-- End #following -->
+
+<!-- Begin #wrap -->
+<div id="wrap">
+<h1><div class="t_bullet title">&bull;</div>{block:indexpage}<div class="page">{currentpage}</div>{/block:indexpage}
+<a href="/">{title}</a></h1>
+<div class="description">{description}</div>
+
+{block:posts}
+
+{block:newdaydate}
+<h2>{month} {dayofmonth}, {year}</h2>
+{/block:newdaydate}
+
+{block:video}<div class="post">
+<div class="bullet video"><a href="{permalink}">&bull;</a></div>
+<p>{video-500}</p>
+{block:caption}<p>{caption}</p>{/block:caption}
+<p>{block:SameDayDate}{TimeAgo}{/block:SameDayDate}
+{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</p>
+<div class="post-notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:video}
+
+{block:audio}<div class="post">
+<div class="bullet audio"><a href="{permalink}">&bull;</a></div>
+<p>{audioplayerblack}</p>
+{block:caption}<p>{caption}</p>{/block:caption}
+<p>{block:SameDayDate}{TimeAgo}{/block:SameDayDate}
+{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</p>
+<div class="post-notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:audio}
+
+{block:chat}<div class="post">
+<div class="bullet chat"><a href="{permalink}">&bull;</a></div>
+{block:title}<h3 class="chat">{title}</h3>{/block:title}
+<ul class="chat">
+{block:lines}
+<li>{block:label}<em>{label}</em>{/block:label} {line}</li>
+{/block:lines}
+</ul>
+<p>{block:SameDayDate}{TimeAgo}{/block:SameDayDate}
+{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</p>
+<div class="post-notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:chat}
+
+{block:link}<div class="post">
+<div class="bullet link"><a href="{permalink}">&bull;</a></div>
+<h3 class="link"><a href="{url}">{name}</a></h3>
+{block:description}<p>{description}</p>{/block:description}
+<p>{block:SameDayDate}{TimeAgo}{/block:SameDayDate}
+{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</p>
+<div class="post-notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:link}
+
+{block:quote}<div class="post">
+<div class="bullet quote"><a href="{permalink}">&bull;</a></div>
+<p>&ldquo;{quote}&rdquo;{block:source} &mdash; {source}{/block:source}</p>
+<p>{block:SameDayDate}{TimeAgo}{/block:SameDayDate}
+{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</p>
+<div class="post-notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:quote}
+
+{block:photo}<div class="post">
+<div class="bullet photo"><a href="{permalink}">&bull;</a></div>
+<p><img src="{PhotoURL-500}" alt="{photoalt}" /></p>
+{block:caption}<p>{caption}</p>{/block:caption}
+<p>{block:SameDayDate}{TimeAgo}{/block:SameDayDate}
+{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</p>
+<div class="post-notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:photo}
+
+{block:text}<div class="post">
+<div class="bullet text"><a href="{permalink}">&bull;</a></div>
+{block:title}<h3 class="text">{title}</h3>{/block:title}
+{body}
+<p>{block:SameDayDate}{TimeAgo}{/block:SameDayDate}
+{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</p>
+<div class="post-notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:text}
+
+{/block:posts}
+
+</div><!-- End #wrap -->
+
+</body>
+</html>
